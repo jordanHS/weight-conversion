@@ -1,9 +1,15 @@
 export default class weightConversion {
-  constructor (gramWeight, kilogramWeight, meterHeight, inchHeight, poundWeight) {
-    this.kiogramWeight = kilogramWeight;
-    this.gramWeight  = gramWeight;
-    this.meterHeight = meterHeight;
-    this.inchHeight = inchHeight;
+  constructor (kilogramWeight, gramWeight, poundWeight) {
+    this.kilogramWeight = kilogramWeight;
+    this.gramWeight = gramWeight;
     this.poundWeight = poundWeight;
-}
+  }
+
+  gramWeight(kilogramWeight) {
+    const weight = 0;
+    let multiplier = 1000;
+    
+    return multiplier * weight;
+  }
+ 
 }

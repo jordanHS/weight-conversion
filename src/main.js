@@ -6,5 +6,6 @@ $(document).ready(function() {
     event.preventDefault();
  
     let kilogramWeight = parseInt($("#userWeight").val());
+    let gramWeight
   });
 });

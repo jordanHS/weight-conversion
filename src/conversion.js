@@ -12,4 +12,11 @@ export default class weightConversion {
     return multiplier * weight;
   }
  
+  poundWeight(kilogramWeight) {
+    const weight = 0;
+    let multiplier = 2.205;
+
+    return multiplier * weight;
+  }
+
 }

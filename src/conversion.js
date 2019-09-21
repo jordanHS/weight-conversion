@@ -49,8 +49,8 @@ export default class weightConversion {
   }
  
   userBMI(kilogramWeight, meterHeight) {
-    let weight = kilogramWeight
-    let heightMultiplier = meterHeight * meterHeight
+    let weight = kilogramWeight;
+    let heightMultiplier = meterHeight * meterHeight;
     return kilogramWeight/heightMultiplier;
   }
   

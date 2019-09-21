@@ -5,44 +5,48 @@ export default class weightConversion {
     this.poundWeight = poundWeight;
     this.inchHeight = inchHeight;
     this.userBMI = userBMI;
+  
   }
   
-
+  userBMI(kilogramWeight, meterHeight) {
+    let weight = kilogramWeight;
+    return ( kilogramWeight/ ( meterHeight * meterHeight ));
+  }
 
 
 
   currentWeight(kilogramWeight) {
-    const weight = 0;
+    let weight = 0;
     if (2.17 < userBMI) {
-      return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${kilogramWeight}. You are underweight.`;
+      return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${kilogramWeight}.`;
     }
       else {
-        return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${kilogramWeight}. You are overweight.`;
+        return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${kilogramWeight}.`;
       }
     }
   
 
 
   gramWeight(kilogramWeight) {
-    const weight = 0;
-    let multiplier = 1000;
+    let weight = 0;
+    const multiplier = 1000;
     if (21.7 < userBMI) {
-      return `You weigh ${(kilogramWeight  * 1000)} and your BMI is ${(kilogramWeight/(meterHeight * meterHeight))} . You are underweight`;
+      return `You weigh ${(kilogramWeight  * 1000)} and your BMI is ${(kilogramWeight/(meterHeight * meterHeight))}.`;
     }
     else {
       return `You weigh ${(kilogramWeight  * 1000)} and your BMI is ${(kilogramWeight/(meterHeight*meterHeight))} . You are overweight.`;
     }
 }
   poundWeight(kilogramWeight) {
-    const weight = 0;
-    let multiplier = 2.205;
+    let weight = 0;
+    const multiplier = 2.205;
 
       return multiplier * weight;
   }
 
   libraWeight(gramWeight) {
-    const weight = 0;
-    let multiplier = .0022;
+    let weight = 0;
+    const multiplier = .0022;
 
     return multiplier * weight;
   }
@@ -66,11 +70,6 @@ export default class weightConversion {
     let multiplier = .002;
 
     return multiplier * weight;
-  }
- 
-  userBMI(kilogramWeight, meterHeight) {
-    let weight = kilogramWeight;
-    return kilogramWeight/(meterHeight * meterHeight);
   }
   
   weightStatus(UserBMI) {

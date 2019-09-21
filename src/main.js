@@ -6,6 +6,6 @@ $(document).ready(function() {
     event.preventDefault();
  
     let kilogramWeight = parseInt($("#userWeight").val());
-    let meterHeight = parseInt($("userHeight"),val());
+    let meterHeight = parseInt($("userHeight").val());
   });
 });

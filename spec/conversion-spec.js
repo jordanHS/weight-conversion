@@ -2,7 +2,7 @@ import weightConversion from "./../src/conversion.js"
 
 describe('weightConversion', function() {
   
-  it('should test for the value of kilogramWeight', function() {
+  it('should test for the value of kilogramWeight and display weightStaus', function() {
     let conversion = new weightConversion(46)
     expect(conversion.kilogramWeight).toEqual(46);
   });

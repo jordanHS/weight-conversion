@@ -1,10 +1,9 @@
 export default class weightConversion {
-  constructor (kilogramWeight, gramWeight, poundWeight) {
+  constructor (kilogramWeight, meterHeight, poundWeight, inchHeight) {
     this.kilogramWeight = kilogramWeight;
-    this.gramWeight = gramWeight;
+    this.meterHeight = meterHeight;
     this.poundWeight = poundWeight;
-    
-
+    this.inchHeight = inchHeight;
   }
 
   gramWeight(kilogramWeight) {
@@ -34,5 +33,32 @@ export default class weightConversion {
 
     return multiplier * weight; 
   }
+  
+  changWeight(kilogramWeight) {
+    const weight = 0;
+    let multiplier = 1.2;
+
+    return multiplier * weight;
+  }
+
+  rotalWeight(gramWeight) {
+    const weight = 0;
+    let multiplier = .002;
+
+    return multiplier * weight;
+  }
+ 
+  userBMI(kilogramWeight, meterHeight) {
+    let weight = kilogramWeight
+    let heightMultiplier = meterHeight * meterHeight
+    return kilogramWeight/heightMultiplier;
+  }
+  
+  
+  
+  
+
+
+
 
 }

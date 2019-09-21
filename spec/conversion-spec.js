@@ -36,4 +36,9 @@ it('should convert gramWeight to funtWeight', function() {
     let conversion = new weightConversion(92)
     expect(46000 * .002).toEqual(92);
   });
+
+  it('should calculate the BMI of the user', function() {
+    let conversion = new weightConversion(15.37)
+    expect (46 / (1.73 * 1.73)).toEqual(15.37) //Test should technically pass but result is an endless decimal that I rounded the first two digits up to
+  });
 });

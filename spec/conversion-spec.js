@@ -31,4 +31,9 @@ it('should convert gramWeight to funtWeight', function() {
     let conversion = new weightConversion(55.2)
     expect(46 * 1.2).toEqual(55.2); //Result equals 55.2 but Karma says 55.19 repeating
   });
+
+  it('should convert gramWright to rotalWeight', function() {
+    let conversion = new weightConversion(92)
+    expect(46000 * .002).toEqual(92);
+  });
 });

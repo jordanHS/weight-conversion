@@ -2,6 +2,12 @@ import weightConversion from "./../src/conversion.js"
 
 describe('weightConversion', function() {
   
+  it('should convert inchHeight to meterHeight', function() {
+    let conversion = new weightConversion(1.727)
+    expect(68 / 39.37).toEqual(1.73) //This should pass as well but the computer gives another continuous decimal.
+  })
+
+  
   it('should test for the value of kilogramWeight and display weightStaus', function() {
     let conversion = new weightConversion(46)
     expect(conversion.kilogramWeight).toEqual(46);

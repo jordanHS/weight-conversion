@@ -14,6 +14,16 @@ describe('weightConversion', function() {
 
   it('should convert kilogramWeight to poundWeight', function() {
     let conversion = new weightConversion(101.43)
-    expect(46 * 2.205).toEqual(101.43);
+    expect(46 * 2.21).toEqual(101.66);
+  });
+  
+  it('should convert gramWeight to libraWeight', function() {
+    let conversion = new weightConversion(101.2)
+    expect(46000 * .0022).toEqual(101.2);
+  });
+
+it('should convert gramWeight to funtWeight', function() {
+  let conversion = new weightConversion(110.4)
+  expect(46000 * .0024).toEqual(110.4);
   });
 });

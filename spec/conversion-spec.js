@@ -24,6 +24,11 @@ describe('weightConversion', function() {
 
 it('should convert gramWeight to funtWeight', function() {
   let conversion = new weightConversion(110.4)
-  expect(46000 * .0024).toEqual(110.4);
+  expect(46000 * .0024).toEqual(110.4); //Result equals 110.4 but Karma says 110.39 repeating
+  });
+
+  it('should convert kilogramWeight to changWeight', function() {
+    let conversion = new weightConversion(55.2)
+    expect(46 * 1.2).toEqual(55.2); //Result equals 55.2 but Karma says 55.19 repeating
   });
 });

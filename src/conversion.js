@@ -1,8 +1,10 @@
 export default class weightConversion {
-  constructor (kilogramWeight, gramWeight, poundWeight, libraWeight) {
+  constructor (kilogramWeight, gramWeight, poundWeight) {
     this.kilogramWeight = kilogramWeight;
     this.gramWeight = gramWeight;
     this.poundWeight = poundWeight;
+    
+
   }
 
   gramWeight(kilogramWeight) {
@@ -25,4 +27,12 @@ export default class weightConversion {
 
     return multiplier * weight;
   }
+
+  funtWeight(gramWeight) {
+    const weight = 0;
+    let multiplier = .0024;
+
+    return multiplier * weight; 
+  }
+
 }

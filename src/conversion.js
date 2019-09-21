@@ -9,16 +9,20 @@ export default class weightConversion {
   }
   
   userBMI(kilogramWeight, meterHeight) {
-    let weight = kilogramWeight;
-    return ( kilogramWeight/ ( meterHeight * meterHeight ));
+    let BMI = kilogramWeight / (meterHeight * meterHeight)
+    if (userBMI < 21.7) 
+      return `Your BMI is ${(kilogramWeight / (meterHeight * meterHeight))}. You are underweight.`;
+    else {
+        return `Your BMI is ${(kilogramWeight / (meterHeight * meterHeight))}. You are overweight.`
+    }
   }
-
+    
 
 
   currentWeight(kilogramWeight) {
     let weight = 0;
-    if (2.17 < userBMI) {
-      return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${kilogramWeight}.`;
+    if (2.17 < metricBMi) {
+      return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${(kilogramWeight / (meterHeight * meterHeight))}.`;
     }
       else {
         return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${kilogramWeight}.`;
@@ -31,10 +35,10 @@ export default class weightConversion {
     let weight = 0;
     const multiplier = 1000;
     if (21.7 < userBMI) {
-      return `You weigh ${(kilogramWeight  * 1000)} and your BMI is ${(kilogramWeight/(meterHeight * meterHeight))}.`;
+      return `You weigh ${(kilogramWeight  * 1000)} grams and your BMI is ${(kilogramWeight/(meterHeight * meterHeight))}.`;
     }
     else {
-      return `You weigh ${(kilogramWeight  * 1000)} and your BMI is ${(kilogramWeight/(meterHeight*meterHeight))} . You are overweight.`;
+      return `You weigh ${(kilogramWeight  * 1000)} grams and your BMI is ${(kilogramWeight/(meterHeight*meterHeight))} .`;
     }
 }
   poundWeight(kilogramWeight) {
@@ -71,18 +75,4 @@ export default class weightConversion {
 
     return multiplier * weight;
   }
-  
-  weightStatus(UserBMI) {
-    const averageBMI = 21.7;
-    if (21.7 > userBMI) {
-      return `You are underweight`;
-    }
-    else 
-      return `You are overweight`;
-    }
-  }
-  
-
-
-
-  
+}

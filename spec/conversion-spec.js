@@ -3,7 +3,7 @@ import weightConversion from "./../src/conversion.js"
 describe('weightConversion', function() {
   
   it('should convert inchHeight to meterHeight', function() {
-    let conversion = new weightConversion(1.727)
+    let conversion = new weightConversion(1.73)
     expect(68 / 39.37).toEqual(1.73) //This should pass as well but the computer gives another continuous decimal.
   })
 

@@ -56,22 +56,22 @@ export default class weightConversion {
   }
 
   funtWeight(gramWeight) {
-    const weight = 0;
-    let multiplier = .0024;
+    let weight = 0;
+    const multiplier = .0024;
 
     return multiplier * weight; 
   }
   
   changWeight(kilogramWeight) {
-    const weight = 0;
-    let multiplier = 1.2;
+    let weight = 0;
+    const multiplier = 1.2;
 
     return multiplier * weight;
   }
 
   rotalWeight(gramWeight) {
-    const weight = 0;
-    let multiplier = .002;
+    let weight = 0;
+    const multiplier = .002;
 
     return multiplier * weight;
   }

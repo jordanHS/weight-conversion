@@ -10,12 +10,12 @@ $(document).ready(function() {
   
     let conversion = new weightConversion(kilogramWeight, meterHeight, gramWeight, poundWeight, libraWeight, funtWeight, changWeight, rotalWeight);
 
-    let gramWeight = conversion.gramWeight(kilogramWeight, multiplier);
-    let poundWeight = conversion.poundWeight(kilogramWeight, multiplier);
-    let libraWeight = conversion.libraWeight(gramWeight, multiplier);
-    let funtWeight = conversion.funtWeight(gramWeight, multiplier);
-    let changWeight = conversion.changWeight(kilogramWeight, multiplier);
-    let rotalWeight = conversion.rotalWeight(rotalWeight, multiplier);
+    let gramWeight = conversion.gramWeight(kilogramWeight);
+    let poundWeight = conversion.poundWeight(kilogramWeight);
+    let libraWeight = conversion.libraWeight(gramWeight);
+    let funtWeight = conversion.funtWeight(gramWeight);
+    let changWeight = conversion.changWeight(kilogramWeight);
+    let rotalWeight = conversion.rotalWeight(rotalWeight);
     
     $(".conversion").text(gramWeight);
     $(".conversion").text(poundWeight);

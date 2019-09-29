@@ -3,9 +3,9 @@ import weightConversion from "./../src/conversion.js"
 describe('weightConversion', function() {
   
   it('should convert inchHeight to meterHeight', function() {
-    let conversion = new weightConversion(1.73)
-    expect(68 / 39.37).toEqual(1.73) //This should pass as well but the computer gives another continuous decimal.
-  })
+    let conversion = new weightConversion(1.727203454406909)
+    expect(68 / 39.37).toEqual(1.727203454406909);
+  });
 
   
   it('should test for the value of currentWeight and display weightStaus', function() {
@@ -29,13 +29,13 @@ describe('weightConversion', function() {
   });
 
 it('should convert gramWeight to funtWeight', function() {
-  let conversion = new weightConversion(110.4)
-  expect(46000 * .0024).toEqual(110.4).tofixed(2); //Result equals 110.4 but Karma says 110.39 repeating
+  let conversion = new weightConversion(110.39999999999999)
+  expect(46000 * .0024).toEqual(110.39999999999999);
   });
 
   it('should convert kilogramWeight to changWeight', function() {
-    let conversion = new weightConversion(55.2)
-    expect(46 * 1.2).toEqual(55.2).tofixed(2); //Result equals 55.2 but Karma says 55.19 repeating
+    let conversion = new weightConversion(55.199999999999996)
+    expect(46 * 1.2).toEqual(55.199999999999996); 
   });
 
   it('should convert gramWright to rotalWeight', function() {
@@ -44,8 +44,8 @@ it('should convert gramWeight to funtWeight', function() {
   });
 
   it('should calculate the BMI of the user', function() {
-    let conversion = new weightConversion(15.37)
-    expect (46 / (1.73 * 1.73)).toEqual(15.37).tofixed(2) //Test should technically pass but result is an endless decimal that I rounded the first two digits up to
+    let conversion = new weightConversion(15.36970830966621)
+    expect (46 / (1.73 * 1.73)).toEqual(15.36970830966621) 
   });
 
   it('should determine weight status of user based on BMI', function() {

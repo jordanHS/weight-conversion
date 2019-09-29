@@ -8,7 +8,7 @@ describe('weightConversion', function() {
   })
 
   
-  it('should test for the value of kilogramWeight and display weightStaus', function() {
+  it('should test for the value of currentWeight and display weightStaus', function() {
     let conversion = new weightConversion(46)
     expect(conversion.kilogramWeight).toEqual(46);
   });
@@ -30,12 +30,12 @@ describe('weightConversion', function() {
 
 it('should convert gramWeight to funtWeight', function() {
   let conversion = new weightConversion(110.4)
-  expect(46000 * .0024).toEqual(110.4); //Result equals 110.4 but Karma says 110.39 repeating
+  expect(46000 * .0024).toEqual(110.4).tofixed(2); //Result equals 110.4 but Karma says 110.39 repeating
   });
 
   it('should convert kilogramWeight to changWeight', function() {
     let conversion = new weightConversion(55.2)
-    expect(46 * 1.2).toEqual(55.2); //Result equals 55.2 but Karma says 55.19 repeating
+    expect(46 * 1.2).toEqual(55.2).tofixed(2); //Result equals 55.2 but Karma says 55.19 repeating
   });
 
   it('should convert gramWright to rotalWeight', function() {
@@ -45,7 +45,7 @@ it('should convert gramWeight to funtWeight', function() {
 
   it('should calculate the BMI of the user', function() {
     let conversion = new weightConversion(15.37)
-    expect (46 / (1.73 * 1.73)).toEqual(15.37) //Test should technically pass but result is an endless decimal that I rounded the first two digits up to
+    expect (46 / (1.73 * 1.73)).toEqual(15.37).tofixed(2) //Test should technically pass but result is an endless decimal that I rounded the first two digits up to
   });
 
   it('should determine weight status of user based on BMI', function() {

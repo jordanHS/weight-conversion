@@ -8,71 +8,84 @@ export default class weightConversion {
    
   }
   
-  userBMI(kilogramWeight, meterHeight) {
+  meterHeight() {
+    let inchHeight = 0;
+    const divider = 39.37;
+    this.meterHeight = inchHeight / divider;
+  }
+  
+  userBMI() {
+    let kilogramWeight = 0;
+    let meterHeight = 0; 
     let userBMI = kilogramWeight / (meterHeight * meterHeight).toFixed(2)
-    if (this.userBMI < 21.7) 
-      return `Your BMI is ${(this.kilogramWeight / (this.meterHeight * this.meterHeight).toFixed(2))}. You are underweight.`;
+    if (userBMI < 21.7) 
+      return `Your BMI is ${(kilogramWeight / (meterHeight * meterHeight).toFixed(2))}. You are underweight.`;
     else {
-        return `Your BMI is ${(this.kilogramWeight / (this.meterHeight * this.meterHeight).toFixed(2))}. You are overweight.`
+        return `Your BMI is ${(kilogramWeight / (meterHeight * this.meterHeight).toFixed(2))}. You are overweight.`;
     }
   }
     
 
 
-  currentWeight(kilogramWeight) {
-    let weight = 0;
-    if (2.17 < this.userBMI) {
-      return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${(kilogramWeight / (meterHeight * meterHeight)).toFixed(2)}.`;
-    }
-      else {
-        return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${kilogramWeight}.`;
-      }
-    }
-  
-
-
-  gramWeight(kilogramWeight, gramMultiplier) {
-    let weight = 0;
-    const multiplier = 1000;
-    if (21.7 < this.userBMI) {
-      return `You weigh ${(kilogramWeight  * 1000)} grams and your BMI is ${(kilogramWeight/(meterHeight * meterHeight))}.`;
+  currentWeight() {
+    let kilogramWeight = 0;
+    let meterHeight = 0;
+    let userBMI = 0;
+    if (21.7 < userBMI) {
+      return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${(kilogramWeight / (meterHeight * meterHeight)).toFixed(2)}. You are underweight`;
+   
     }
     else {
-      return `You weigh ${(kilogramWeight  * 1000)} grams and your BMI is ${(kilogramWeight/(meterHeight*meterHeight))} .`;
+      return `You weigh ${(kilogramWeight)} kilograms and have a BMI of ${(kilogramWeight / (meterHeight * meterHeight)). toFixed(2)}. you are overweight.`;
+    }
+  } 
+  
+
+
+  gramWeight() {
+    let kilogramWeight = 0;
+    let meterHeight = 0;
+    let userBMI = 0;
+    const multiplier = 1000;
+    if (21.7 < userBMI) {
+      return `You weigh ${(kilogramWeight * multiplier)} grams and your BMI is ${(kilogramWeight/(meterHeight * meterHeight))}.`;
+    }
+    else {
+      return `You weigh ${(kilogramWeight * multiplier)} grams and your BMI is ${(this.kilogramWeight/(meterHeight * meterHeight))} .`;
     }
 }
-  poundWeight(kilogramWeight) {
-    let weight = 0;
+  poundWeight() {
+    let kilogramWeight = 0;
     const multiplier = 2.205;
 
-      return multiplier * weight;
+      return multiplier * kilogramWeight;
   }
 
-  libraWeight(gramWeight) {
-    let weight = 0;
+  libraWeight() {
+    let gramWeight = 0;
     const multiplier = .0022;
 
-    return multiplier * weight;
+    return multiplier * gramWeight;
   }
 
-  funtWeight(gramWeight) {
-    let weight = 0;
+  funtWeight() {
+    let gramWeight = 0;
     const multiplier = .0024;
 
-    return multiplier * weight; 
+    return multiplier * gramWeight; 
   }
   
-  changWeight(kilogramWeight) {
-    let weight = 0;
+  changWeight() {
+    let kilogramWeight = 0;
     const multiplier = 1.2;
 
-    return multiplier * weight;
+    return multiplier * kilogramWeight;
   }
 
-  rotalWeight(gramWeight) {
-    let weight = 0;
+  rotalWeight() {
+    let gramWeight = 0;
     const multiplier = .002;
 
-    return multiplier * weight;
+    return multiplier * gramWeight;
   }
 }

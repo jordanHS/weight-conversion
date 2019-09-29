@@ -1,28 +1,30 @@
-  import $ from 'jquery'
-import weightConversion from './conversion.js'
+  import $ from 'jquery';
+import weightConversion from './conversion.js';
 
 $(document).ready(function() {
-  $("#convert").submit(function(event) {
+  $("#run").submit(function(event) {
     event.preventDefault();
  
-    let kilogramWeight = parseFloat($("#userWeight").val());
-    let meterHeight = parseFloat($("userHeight").val());
+    let kilogramWeight = parseInt($("#userWeight").val());
+    let meterHeight = parseInt($("userHeight").val());
   
-    let conversion = new weightConversion(kilogramWeight, meterHeight, gramWeight, poundWeight, libraWeight, funtWeight, changWeight, rotalWeight);
+    let conversion = new weightConversion(kilogramWeight, gramWeight, meterHeight, poundWeight, libraWeight, funtWeight, changWeight, rotalWeight, userBMI);
 
-    let gramWeight = conversion.gramWeight(kilogramWeight);
+    let gramWeight = conversion.gramWeight(kilogramWeight, meterHeight);
     let poundWeight = conversion.poundWeight(kilogramWeight);
     let libraWeight = conversion.libraWeight(gramWeight);
     let funtWeight = conversion.funtWeight(gramWeight);
     let changWeight = conversion.changWeight(kilogramWeight);
     let rotalWeight = conversion.rotalWeight(rotalWeight);
+    let userBMI = conversion.userBMI(kilogramWeight, meterHeight);
     
-    $(".conversion").text(gramWeight);
-    $(".conversion").text(poundWeight);
-    $(".conversion").text(libraWeight);
-    $(".conversion").text(funtWeight);
-    $(".conversion").text(changWeight);
-    $(".conversion").text(rotalWeight);
+    $("#gramWeight").text(gramWeight);
+    $("#poundWeight").text(poundWeight);
+    $("libraWeight").text(libraWeight);
+    $("#funtWeight").text(funtWeight);
+    $("changWeight").text(changWeight);
+    $("rotalWeight").text(rotalWeight);
+    $("#userBMI").text(userBMI);
 
 
     

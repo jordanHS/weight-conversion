@@ -8,16 +8,10 @@ export default class weightConversion {
    
   }
   
-  meterHeight() {
-    let inchHeight = 0;
-    const divider = 39.37;
-    this.meterHeight = inchHeight / divider;
-  }
-  
   userBMI() {
     let kilogramWeight = 0;
     let meterHeight = 0; 
-    let userBMI = kilogramWeight / (meterHeight * meterHeight).toFixed(2)
+    let userBMI = kilogramWeight / (meterHeight * meterHeight).toFixed(2);
     if (userBMI < 21.7) 
       return `Your BMI is ${(kilogramWeight / (meterHeight * meterHeight).toFixed(2))}. You are underweight.`;
     else {

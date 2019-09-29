@@ -22,7 +22,7 @@ This application converts the users weight from kilograms to grams, libras, funt
 
 ## Known Bugs
 
-Results not displaying due to inaccessible variable.
+Displaying NaN a& 0.
 
 ## Support and contact details
 

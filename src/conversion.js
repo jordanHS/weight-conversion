@@ -40,19 +40,16 @@ export default class weightConversion {
     let kilogramWeight = 0;
     let meterHeight = 0;
     let userBMI = 0;
-    const multiplier = 1000;
-    if (21.7 < userBMI) {
+    const multiplier = 1000;{
       return `You weigh ${(kilogramWeight * multiplier)} grams and your BMI is ${(kilogramWeight/(meterHeight * meterHeight))}.`;
     }
-    else {
-      return `You weigh ${(kilogramWeight * multiplier)} grams and your BMI is ${(this.kilogramWeight/(meterHeight * meterHeight))} .`;
-    }
-}
+  }
+    
   poundWeight() {
     let kilogramWeight = 0;
     const multiplier = 2.205;
 
-      return multiplier * kilogramWeight;
+      return `You weigh ${(multiplier * kilogramWeight)} pounds.`;
   }
 
   libraWeight() {

@@ -12,12 +12,12 @@ $(document).ready(function() {
     let conversion = new weightConversion();
 
     let gramWeight = conversion.gramWeight(kilogramWeight, meterHeight);
-    let poundWeight = conversion.poundWeight(kilogramWeight);
+    let poundWeight = conversion.poundWeight;
     let libraWeight = conversion.libraWeight(gramWeight);
     let funtWeight = conversion.funtWeight(gramWeight);
     let changWeight = conversion.changWeight(kilogramWeight);
-    let rotalWeight = conversion.rotalWeight(rotalWeight);
-    let userBMI = conversion.userBMI(kilogramWeight, meterHeight);
+    let rotalWeight = conversion.rotalWeight(gramWeight);
+    let userBMI = conversion.userBMI;
     
     $("#gramWeight").text(gramWeight);
     $("#poundWeight").text(poundWeight);

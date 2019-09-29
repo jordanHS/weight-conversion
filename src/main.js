@@ -7,8 +7,9 @@ $(document).ready(function() {
  
     let kilogramWeight = parseInt($("#userWeight").val());
     let meterHeight = parseInt($("userHeight").val());
+    
   
-    let conversion = new weightConversion(kilogramWeight, gramWeight, meterHeight, poundWeight, libraWeight, funtWeight, changWeight, rotalWeight, userBMI);
+    let conversion = new weightConversion();
 
     let gramWeight = conversion.gramWeight(kilogramWeight, meterHeight);
     let poundWeight = conversion.poundWeight(kilogramWeight);

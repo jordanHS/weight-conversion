@@ -10,7 +10,7 @@ This application converts the users weight from kilograms to grams, libras, funt
 3. Users weight in grams is multiplied by .022 to get the libra conversion.
 4. Users weight in grams is multiplied by .0024 to get the chang conversion.
 5.  Users weight in kilograms is multiplied by .002 to get the rotal conversion.
-6. The users weight in kilogras is divided by the their squared meter height to calculate the BMI.
+6. The users weight in kilograms is divided by the their squared meter height to calculate the BMI.
 7. The users BMI is compared against the average BMI (21.7) to test if they are underweight or overweight.
 
 ## Setup/Installation requirements

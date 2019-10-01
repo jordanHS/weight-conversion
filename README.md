@@ -8,7 +8,7 @@ This application converts the users weight from kilograms to grams, libras, funt
 1. Users weight in kilograms is is multiplied by 1000 to get the gram conversion.
 2. Users weight in kilograms is multiplied by 2.21 to get the pound conversion.
 3. Users weight in grams is multiplied by .022 to get the libra conversion.
-4. Users weight in grams is multiplied by .0024 to get the funt conversion.
+4. Users weight in grams is multiplied by .024 to get the funt conversion.
 5. Users weight in kilograms is multiplied by 1.2 to get the chang conversion
 6.  Users weight in kilograms is multiplied by .002 to get the rotal conversion.
 7. The users weight in kilograms is divided by the their squared meter height to calculate the BMI.
